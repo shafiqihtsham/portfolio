@@ -1,30 +1,55 @@
 "use client";
 
-import Header from "@/app/components/Header/Header";
-import Card from "@/app/components/Card/Card";
-import Footer from "@/app/components/Footer/Footer";
-
 export default function Home() {
+  // make the text slide animation where it says full stack development
+  //add link to blog where it says blog.
   return (
-    <>
-      {" "}
-      <main className="my-5 text-center w-full p-2 h-full">
-        <Header />
-        <div>
-          <Card title="About Me">
-            <article className="text-sm">
-              A final-year Software Engineering student. With a solid foundation
-              in programming and machine learning, I'm eager to transition my
-              skills from academia to the professional realm. I'm passionate
-              about problem-solving and innovation, and I'm excited about the
-              prospect of contributing to your team. Let's connect and explore
-              how my dedication to software engineering can benefit your
-              organization.
-            </article>
-          </Card>
+    <main className="p-4 m-4 min-h-screen">
+      <div className="text-center">
+        {/* You can add any content specific to the center section */}
+      </div>
+
+      <div className="m-2 mt-4">
+        <span className="text-3xl font-light">
+          Hi, I'm Eddy, formally known as Ihtsham Shafiq. A current UTS student
+          and aspiring Software Engineer experienced in full-stack development.
+        </span>
+      </div>
+
+      <section className="mt-6">
+        <h3 className="text-4xl font-bold">Tools I've Used</h3>
+        <ul className="text-lg list-inside list-disc mt-2">
+          <li>Docker</li>
+          <li>Git/Github</li>
+          <li>Visual Studio Code, Vim</li>
+          <li>ReactJS, ExpressJS, VueJS</li>
+          <li>GraphQL, MongoDB, mySQL</li>
+        </ul>
+      </section>
+
+      <section className="mt-6">
+        <h3 className="text-4xl font-bold">Background</h3>
+        <div className="p-4 text-lg">
+          I'm in my final year at UTS, majoring in Software Engineering with a
+          focus on Data Analytics. Passionate about experimenting with new
+          things, I love discovering unique food spots and diving into fresh
+          JavaScript frameworks. Beyond programming, you'll find me enjoying
+          hobbies like Bouldering, Table Tennis, and Badminton. Check out my
+          blog for more!
         </div>
-      </main>
-      <Footer />
-    </>
+      </section>
+
+      <section className="mt-6">
+        <h3 className="text-4xl font-bold">Days I Code</h3>
+        <div className="p-4 text-lg">
+          I'm in my final year at UTS, majoring in Software Engineering with a
+          focus on Data Analytics. Passionate about experimenting with new
+          things, I love discovering unique food spots and diving into fresh
+          JavaScript frameworks. Beyond programming, you'll find me enjoying
+          hobbies like Bouldering, Table Tennis, and Badminton. Check out my
+          blog for more!
+        </div>
+      </section>
+    </main>
   );
 }
