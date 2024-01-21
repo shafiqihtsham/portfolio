@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
-  const { setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme, systemTheme, theme } = useTheme();
 
   useEffect(() => {
     setMounted(true);

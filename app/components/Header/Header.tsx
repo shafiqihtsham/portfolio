@@ -8,8 +8,8 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const pathname = usePathname();
   return (
-    <div className="flex flex-row w-full bg-gray-200 dark:bg-slate-800 justify-between px-10 p-4">
-      <span>Ihtsham Shafiq</span>
+    <header className="flex flex-row w-full bg-slate-200 dark:bg-gray-900 justify-between px-10 p-4 mb-10">
+      <span className="invisible">Ihtsham Shafiq</span>
       <ul className="flex flex-wrap gap-5 items-center justify-center text-gray-900 dark:text-white">
         <li>
           <Link
@@ -36,10 +36,18 @@ const Header = () => {
           </Link>
         </li>
         <li>
+          <Link
+            href="/snippets"
+            className={`link ${pathname === "/blog" ? "font-bold" : ""}`}
+          >
+            Snippets
+          </Link>
+        </li>
+        <li>
           <ThemeToggle />
         </li>
       </ul>
-    </div>
+    </header>
   );
 };
 

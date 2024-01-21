@@ -1,55 +1,89 @@
 "use client";
+import React from "react";
+import { useTheme } from "next-themes";
+import ActivityCalendar from "./components/ActivityCalendar/ActivityCalendar";
+import Hero from "./components/Hero/Hero";
 
 export default function Home() {
+  const { theme } = useTheme();
+
   // make the text slide animation where it says full stack development
   //add link to blog where it says blog.
+
   return (
-    <main className="p-4 m-4 min-h-screen">
-      <div className="text-center">
-        {/* You can add any content specific to the center section */}
-      </div>
+    <main className="m-8 p-8">
+      <Hero />{" "}
 
-      <div className="m-2 mt-4">
-        <span className="text-3xl font-light">
-          Hi, I'm Eddy, formally known as Ihtsham Shafiq. A current UTS student
-          and aspiring Software Engineer experienced in full-stack development.
-        </span>
-      </div>
-
-      <section className="mt-6">
-        <h3 className="text-4xl font-bold">Tools I've Used</h3>
-        <ul className="text-lg list-inside list-disc mt-2">
-          <li>Docker</li>
-          <li>Git/Github</li>
-          <li>Visual Studio Code, Vim</li>
-          <li>ReactJS, ExpressJS, VueJS</li>
-          <li>GraphQL, MongoDB, mySQL</li>
-        </ul>
-      </section>
-
-      <section className="mt-6">
-        <h3 className="text-4xl font-bold">Background</h3>
-        <div className="p-4 text-lg">
-          I'm in my final year at UTS, majoring in Software Engineering with a
-          focus on Data Analytics. Passionate about experimenting with new
-          things, I love discovering unique food spots and diving into fresh
-          JavaScript frameworks. Beyond programming, you'll find me enjoying
+      <div className="block">
+      <section className="mt-6 col-span-2">
+        <h3 className="text-2xl font-bold mb-6 text-[#007bff] tracking-wider col-span-2">
+          Background
+        </h3>
+        <div className="p-4 text-lg text-[#444452] dark:text-[#afafbf] leading-8 max-w-prose m-auto col-span-2">
+          I'm in my{" "}
+          <span className="dark:text-white text-black font-semibold">
+            final year at UTS
+          </span>
+          , studying Software Engineering with a focus on{" "}
+          <span className="dark:text-white text-black font-semibold">
+            Data Analytics
+          </span>
+          . Passionate about experimenting with new things, I love discovering
+          unique food spots and diving into fresh JavaScript frameworks.{" "}
+          <span className="dark:text-white text-black font-semibold">
+            Beyond programming, you'll find me enjoying{" "}
+          </span>
           hobbies like Bouldering, Table Tennis, and Badminton. Check out my
           blog for more!
         </div>
       </section>
+      <section className="mt-6 col-span-2">
+        <h3 className="text-2xl font-bold mb-6 text-[#007bff] tracking-wider ">
+          Skills
+        </h3>
 
-      <section className="mt-6">
-        <h3 className="text-4xl font-bold">Days I Code</h3>
-        <div className="p-4 text-lg">
-          I'm in my final year at UTS, majoring in Software Engineering with a
-          focus on Data Analytics. Passionate about experimenting with new
-          things, I love discovering unique food spots and diving into fresh
-          JavaScript frameworks. Beyond programming, you'll find me enjoying
-          hobbies like Bouldering, Table Tennis, and Badminton. Check out my
-          blog for more!
+        <div className="flex flex-col sm:grid sm:grid-cols-3 max-w-prose m-auto">
+          <div>
+            <h4 className="font-bold text-lg mb-2">Languages</h4>
+            <ul className="list-none list-inside text-[#444452] dark:text-[#afafbf]">
+              <li>Javascript (ES6)</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>Swift</li>
+              <li>C++</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-lg mb-2">Frameworks</h4>
+            <ul className="list-none list-inside text-[#444452] dark:text-[#afafbf]">
+              <li>ReactJS</li>
+              <li>ExpressJS</li>
+              <li>NodeJS</li>
+              <li>Tensorflow</li>
+              <li>OpenCV</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-lg mb-2">Tools</h4>
+            <ul className="list-none list-inside text-[#444452] dark:text-[#afafbf]">
+              <li>Ubuntu</li>
+              <li>Bash</li>
+              <li>Git & Github</li>
+              <li>Postman</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
         </div>
       </section>
+      <section className="mt-6">
+        <h3 className="text-2xl font-bold mb-6 text-[#007bff] tracking-wider">
+          Days I Code
+        </h3>
+        <ActivityCalendar theme={theme} />
+      </section>
+      </div>
     </main>
   );
 }
