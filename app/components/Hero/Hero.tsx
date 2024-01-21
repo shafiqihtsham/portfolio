@@ -7,7 +7,7 @@ const Hero = () => {
         Hi! <span>👋</span>
       </span>
       <div className="text-[30px] md:text-[40px] font-light tracking-wide leading-[60px] text-[#444452] dark:text-[#afafbf] max-w-prose">
-        I'm <b className="dark:text-white text-black">Ihtsham Shafiq</b>. A
+        I&apos;m <b className="dark:text-white text-black">Ihtsham Shafiq</b>. A
         current final-year UTS student and aspiring Software Engineer
         experienced in <br></br>
         <span className="text-[#007bff] "> full-stack development</span>.
