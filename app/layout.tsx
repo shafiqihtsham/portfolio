@@ -17,13 +17,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="min-h-screen min-w-screen">
-      <body className={inter.className}>
-        <Theme>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className="min-h-screen min-w-screen"
+    >
+      <Theme>
+        <body className={inter.className}>
           <Header />
           {children} <Footer />
-        </Theme>
-      </body>
+        </body>
+      </Theme>
     </html>
   );
 }
