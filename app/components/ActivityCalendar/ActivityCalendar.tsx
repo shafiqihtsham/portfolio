@@ -17,7 +17,7 @@ const ActivityCalendar = (props: CalendarProps) => {
   };
 
   return (
-    <div className="flex justify-center items-center h-full">
+    <div className="h-full">
       <GitHubCalendar
         blockRadius={1}
         username="shafiqihtsham"

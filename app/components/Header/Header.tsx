@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const pathname = usePathname();
   return (
-    <header className="flex flex-row w-full bg-slate-200 dark:bg-gray-900 justify-between px-10 p-4 mb-10">
+    <div className="flex flex-row flex-wrap w-full bg-slate-200 dark:bg-gray-900 justify-between px-10 pt-4 sm:mb-10">
       <span className="invisible">Ihtsham Shafiq</span>
       <ul className="flex flex-wrap gap-5 items-center justify-center text-gray-900 dark:text-white">
         <li>
@@ -47,7 +47,7 @@ const Header = () => {
           <ThemeToggle />
         </li>
       </ul>
-    </header>
+    </div>
   );
 };
 
