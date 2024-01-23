@@ -38,7 +38,7 @@ const Header = () => {
         <li>
           <Link
             href="/snippets"
-            className={`link ${pathname === "/blog" ? "font-bold" : ""}`}
+            className={`link ${pathname === "/snippets" ? "font-bold" : ""}`}
           >
             Snippets
           </Link>
