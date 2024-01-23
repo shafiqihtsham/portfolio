@@ -13,7 +13,7 @@ export default function Theme({ children }: { children: React.ReactNode }) {
     return <>{children}</>;
   }
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark">
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       {children}
     </ThemeProvider>
   );
