@@ -9,10 +9,13 @@ export default function Home() {
 
   return (
     <main className="">
-      <div className="contianer w-screen m-auto flex justify-center">
-        <div className="grid grid-cols-[50%_50%] gap-10">
-          <Card />
-          <div className="invisible"><Card /></div>
+      <div className="w-screen flex justify-center">
+        <div className="mx-auto px-[30px] sm:p-10">
+          <ul>
+            <li>
+              <Card />
+            </li>
+          </ul>
         </div>
       </div>
     </main>
