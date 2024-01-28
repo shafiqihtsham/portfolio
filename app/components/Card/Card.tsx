@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Pill from "../Pill/Pill";
+import Pill from "../Pill";
 import Link from "next/link";
 
 // interface CardProps {

@@ -2,10 +2,10 @@
 
 import React from "react";
 import { useTheme } from "next-themes";
-import ActivityCalendar from "./components/ActivityCalendar/ActivityCalendar";
-import Hero from "./components/Hero/Hero";
-import Skills from "./components/Skills/Skills";
-import About from "./components/About/About";
+import ActivityCalendar from "./components/ActivityCalendar";
+import Hero from "./components/Hero";
+import Skills from "./components/Skills";
+import About from "./components/About";
 
 export default function Home() {
   const { theme } = useTheme();
