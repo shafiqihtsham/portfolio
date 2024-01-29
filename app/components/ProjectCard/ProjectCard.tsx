@@ -2,20 +2,20 @@ import Image from "next/image";
 import Pill from "../Pill";
 import Link from "next/link";
 
-// interface CardProps {
-//   title: string;
-//   image: string;
-//   description: string;
-//   project-types: string;
-//   
-// }
+interface CardProps {
+  title: string;
+  image: string;
+  description: string;
+  projectTypes: string[];
+  projectLink: string;
+}
 
-const Card = () => {
+const ProjectCard = (props: CardProps) => {
   return (
     <div className="flex flex-col items-center max-w-sm bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 my-10">
       <Image
         className="aspect-video sm:aspect-auto object-cover rounded-t-lg h-auto md:h-auto md:w-48 md:rounded-none md:rounded-s-lg "
-        src="/images/cssrefresh.webp"
+        src={props.image}
         width={500}
         height={500}
         alt=""
@@ -23,14 +23,10 @@ const Card = () => {
       <div className="flex flex-col justify-between p-4 leading-normal">
         <div className="flex flex-row justify-between">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            CSS Refresh
+            {props.title}
           </h5>
           <div className="z-50">
-            <Link
-              href={
-                "https://github.com/shafiqihtsham/VSCExtensions/tree/main/css-snippets"
-              }
-            >
+            <Link href={props.projectLink}>
               <svg
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -47,16 +43,16 @@ const Card = () => {
         </div>
 
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-3">
-          My first Visual Studio Code extension which adds snippets to make your
-          CSS usable across different browsers!
+          {props.description}
         </p>
         <div className="flex flex-row flex-nowrap">
-          <Pill text={"VSC Extension"} />
-          <Pill text={"Javascript"} />
+          {props.projectTypes.map((type, index) => (
+            <Pill key={index} text={type} />
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default Card;
+export default ProjectCard;
