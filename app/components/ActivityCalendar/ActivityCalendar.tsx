@@ -1,5 +1,5 @@
 import React from "react";
-import GitHubCalendar from "react-github-calendar";
+import GitHubCalendar, { Color, ColorScale } from "react-github-calendar";
 
 interface CalendarProps {
   theme: string | undefined;
@@ -7,12 +7,12 @@ interface CalendarProps {
 
 const ActivityCalendar = (props: CalendarProps) => {
   interface ThemeInput {
-    light: string[];
-    dark: string[];
+    light: [Color, Color];
+    dark: [Color, Color];
   }
 
   const explicitTheme: ThemeInput = {
-    light: ["#c5e3ed","darkblue"],
+    light: ["#c5e3ed", "darkblue"],
     dark: ["#08183a", "#71FACA"],
   };
 
