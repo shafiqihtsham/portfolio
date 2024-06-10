@@ -15,7 +15,7 @@ const Footer = () => {
                     className="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
                 >
                     <svg
-                        className="w-4 h-4"
+                        className="w-4 h-4 z-50"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
