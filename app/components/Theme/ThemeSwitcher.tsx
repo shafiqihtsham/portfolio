@@ -17,7 +17,7 @@ export default function ThemeToggle() {
     <div className="flex flex-col justify-center">
       <button
         name="light-switch"
-        className="light-switch flex align-bottom"
+        className="light-switch flex align-bottom cursor-pointer"
         onClick={() => {
           if (theme === "dark") {
             return setTheme("light");

@@ -10,12 +10,8 @@ import About from "./components/About";
 export default function Home() {
   const { theme } = useTheme();
 
-  // make the text slide animation where it says full stack development
-  //add link to blog where it says blog.
-
   return (
     <main>
-      
       <Hero />
       <div className="mx-auto px-[30px] mt-[-40px] sm:px-[50px] md:px-[150px] max-w-[1440px] ">
         <section className="grid md:grid-cols-[200px_1fr] mb-24">
@@ -39,7 +35,6 @@ export default function Home() {
             <Skills />
           </div>
         </section>
-        
 
         <section className="grid lg:grid-cols-[200px_1fr] my-12 mb-40">
           <div className="col-span-1  min-w-[200px]">

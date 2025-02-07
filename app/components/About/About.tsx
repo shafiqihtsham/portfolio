@@ -15,10 +15,17 @@ const About = () => {
         . Passionate about experimenting with new things, I love discovering
         unique food spots and diving into fresh JavaScript frameworks.
         <span className="dark:text-white text-black font-semibold">
-          {" Beyond programming, you'll find me enjoying "}
+          {" Beyond programming, "}
         </span>
-        hobbies like Bouldering, Table Tennis, and Badminton. Check out my blog
-        for more!
+        my hobbies include{" "}
+        <span className="dark:text-white text-black font-semibold">
+          {"Powerlifting, Bouldering "}
+        </span>
+        and
+        <span className="dark:text-white text-black font-semibold">
+          {" Badminton"}
+        </span>
+        . Check out my blog for more!
       </p>
     </div>
   );

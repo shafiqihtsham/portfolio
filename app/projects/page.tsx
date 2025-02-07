@@ -6,15 +6,14 @@ export default function Home() {
   // add link to blog where it says blog.
 
   return (
-    <main className="relative min-h-screen m-10">
-      <div className="flex flex-col m-auto justify-evenly md:justify-around py-[20px] px-[50px] sm:py-[70px] gap-[0px] md:gap-6 pb-[50px] md:px-[100px] md:py-[120px] max-w-[1440px] leading-[24px]">
-        <h1 className="text-[35px] md:text-[40px] text-[#007bff]">
-          Personal Projects
-        </h1>
-      </div>
-
-      <div className="container mx-auto">
-        <div className="w-full flex flex-col items-center">
+    <main className="relative m-10">
+      <div className="container mx-auto max-w-fit">
+        <div className="text-[35px] md:text-[40px]">
+          <h1 className="text-(--brand-color) my-10 font-extrabold">
+            Personal Projects
+          </h1>
+        </div>
+        <div className="max-w-fit flex flex-col">
           <Card
             description="A site I was commissioned to make for a renewable energy startup!"
             imageLink="/images/air2energy.png"
