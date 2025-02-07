@@ -8,8 +8,8 @@ type AllPostsData = {
   id: string;
 }[];
 
-export default async function Home() {
-  const allPostsData: AllPostsData = await getSortedPostsData();
+export default function Home() {
+  const allPostsData: AllPostsData = getSortedPostsData();
 
   return (
     <main className="dark:prose-invert prose container mx-auto p-10 min-h-screen">

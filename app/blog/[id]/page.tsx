@@ -1,12 +1,8 @@
-import { getPostData } from "@/lib/posts";
+import { getPostData, getAllPostIds } from "@/lib/posts";
 
-type Params = {
+type Params = Promise<{
   id: string;
-};
-
-type Props = {
-  params: Params;
-};
+}>;
 
 type PostData = {
   title: string;
@@ -14,18 +10,23 @@ type PostData = {
   contentHtml: string;
 };
 
-export async function generateMetadata({ params }: Props) {
-  const { id } = await params;
-  const postData: PostData = await getPostData(id);
+export async function generateMetadata(props: { params: Params }) {
+  const params = await props.params;
+  const postData: PostData = await getPostData(params.id);
 
   return {
     title: postData.title,
   };
 }
 
+export async function generateStaticParams() {
+  const postData = getAllPostIds();
+  return postData;
+}
+
 // -< Post >-
-export default async function Post({ params }: Props) {
-  const { id } = await params;
+export default async function Post(props: { params: Params }) {
+  const { id } = await props.params;
   const postData: PostData = await getPostData(id);
 
   return (
