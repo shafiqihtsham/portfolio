@@ -36,14 +36,6 @@ const Header = () => {
           </Link>
         </li>
         <li>
-          <Link
-            href="/snippets"
-            className={`link ${pathname === "/snippets" ? "font-bold" : ""}`}
-          >
-            Snippets
-          </Link>
-        </li>
-        <li>
           <ThemeToggle />
         </li>
       </ul>
