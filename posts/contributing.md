@@ -18,6 +18,6 @@ After I pushed the PR I was frantically checking my Github Notifications, waitin
 Since the changes were very simple the PR was approved and merged, and I felt a sense of accomplishment, knowing that I did something that I had never done before.
 
 The best part about contributing to open source is seeing your name in the `changelog`. It feels nice knowing that you worked on something used by people all over the world.
-![Changelog](/images/contribution.png)
+![Changelog](/images/contribution.PNG)
 
 Currently, I have been continuing to contribute to open source, being able to write pages for [MDN](https://github.com/mdn/content/pull/37814#event-16073520979) and working on my company's open source, zero trust secrets management software [Polykey](https://github.com/MatrixAI/Polykey-CLI).
