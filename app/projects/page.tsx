@@ -19,7 +19,7 @@ export default function Home() {
             imageLink="/images/air2energy.png"
             title="Air2Energy"
             projectTags={["React", "Typescript", "Tailwind"]}
-            projectLink={"https://www.air2energy.net"}
+            projectLink={"https://air2energy.vercel.app/"}
           />
           <Card
             description="A simple minecraft themed static site to visualise various sorting algorithms."
